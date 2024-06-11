@@ -1,0 +1,17 @@
+﻿@model ProductVM
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2 class="text-center mb-4">Delete Product</h2>
+            <form asp-action="DeleteProduct">
+                <div class="form-group">
+                    <label for="productid">Product Id</label>
+                    <input type="number" class="form-control" id="productid" asp-for="Id" required>
+
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>

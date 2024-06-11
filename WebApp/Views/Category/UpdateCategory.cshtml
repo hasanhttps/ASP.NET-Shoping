@@ -1,0 +1,17 @@
+﻿@model CategoryVM
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2 class="text-center mb-4">Update Category</h2>
+            <form asp-action="UpdateCategory">
+                <div class="form-group">
+                    <label for="CategoryName">Category Id</label>
+                    <input type="number" class="form-control" id="category" asp-for="Id" required>
+                    <input type="text" class="form-control" id="category" asp-for="CategoryName" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Update</button>
+            </form>
+        </div>
+    </div>
+</div>

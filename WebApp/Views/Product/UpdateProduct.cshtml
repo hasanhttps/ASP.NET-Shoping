@@ -1,0 +1,38 @@
+﻿@model ProductVM
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2 class="text-center mb-4">Update Product</h2>
+            <form asp-action="UpdateProduct">
+                <div class="form-group">
+                    <label for="product">Product Id</label>
+                    <input type="number" class="form-control" id="product" asp-for="Id" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="productname">Product Name</label>
+                    <input type="text" class="form-control" id="productname" asp-for="Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="productimage">Product Image</label>
+                    <input type="url" class="form-control" id="productimage" asp-for="ImageUrl" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="productdescription">Product Description</label>
+                    <input type="text" class="form-control" id="productdescription" asp-for="Description" required>
+                </div>
+
+                <select asp-for="CategoryId">
+                    @if (Model.Categories != null)
+                        foreach(var category in Model.Categories){
+                            <option value=@category.Id >@category.Name</option>
+                        }
+                </select>
+                <button type="submit" class="btn btn-primary btn-block">Update</button>
+            </form>
+        </div>
+    </div>
+</div>
